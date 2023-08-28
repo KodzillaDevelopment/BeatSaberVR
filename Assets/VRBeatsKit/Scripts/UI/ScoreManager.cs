@@ -71,6 +71,10 @@ namespace VRBeats
 
         private void Update()
         {
+            Debug.Log("Error limit is : " + errorLimit);
+            Debug.Log("Current score is : " + currentScore);
+            Debug.Log("Accumulate errors is : " + acumulateErrors);
+
             UpdateUI();
         }
 

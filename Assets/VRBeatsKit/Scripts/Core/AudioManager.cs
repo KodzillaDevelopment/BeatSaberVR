@@ -24,16 +24,19 @@ namespace VRBeats
         private void ResetThisComponent()
         {
             SetAudioMixerPitch(1.0f);
-            gameObject.CancelAllTweens();
+            if (gameObject)
+            {
+                gameObject.CancelAllTweens();
+            }
         }
 
-        public BaseTween BlendAudioMixerPitch(float from ,float to)
+        public BaseTween BlendAudioMixerPitch(float from, float to)
         {
-            return PlatinioTween.instance.ValueTween(from , to , fadeOutTime).SetEase(Ease.EaseOutExpo).SetOnUpdateFloat(delegate (float v)
-            {
-                if(audioSource != null)
-                    SetAudioMixerPitch(v);
-            }).SetOwner(gameObject);
+            return PlatinioTween.instance.ValueTween(from, to, fadeOutTime).SetEase(Ease.EaseOutExpo).SetOnUpdateFloat(delegate (float v)
+          {
+              if (audioSource != null)
+                  SetAudioMixerPitch(v);
+          }).SetOwner(gameObject);
         }
 
         public void SetAudioMixerPitch(float value)
