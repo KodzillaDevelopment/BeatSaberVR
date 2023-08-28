@@ -18,23 +18,3 @@ MonoBehaviour:
     Mode: 0
     songName: Every Night
     author: freebeats.io
-  - playableAsset: {fileID: 11400000, guid: 23be2b7c74a9ac14cbc4255a9e7459e9, type: 2}
-    potrait: {fileID: 21300000, guid: 23cb85f3698a7d543854fb6cfbadd16a, type: 3}
-    Mode: 0
-    songName: Every Night
-    author: freebeats.io
-  - playableAsset: {fileID: 11400000, guid: 23be2b7c74a9ac14cbc4255a9e7459e9, type: 2}
-    potrait: {fileID: 21300000, guid: 23cb85f3698a7d543854fb6cfbadd16a, type: 3}
-    Mode: 0
-    songName: Every Night
-    author: freebeats.io
-  - playableAsset: {fileID: 11400000, guid: f1dbcb0cb667ab341901b634ab002c55, type: 2}
-    potrait: {fileID: 21300000, guid: 23cb85f3698a7d543854fb6cfbadd16a, type: 3}
-    Mode: 1
-    songName: Every Night
-    author: freebeats.io
-  - playableAsset: {fileID: 11400000, guid: f1dbcb0cb667ab341901b634ab002c55, type: 2}
-    potrait: {fileID: 21300000, guid: 23cb85f3698a7d543854fb6cfbadd16a, type: 3}
-    Mode: 1
-    songName: Every Night
-    author: freebeats.io
