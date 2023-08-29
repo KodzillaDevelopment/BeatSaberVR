@@ -32,8 +32,8 @@ Transform:
   m_GameObject: {fileID: 243411928101370036}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5644742802348254396}
   - {fileID: 3270683372496419656}
@@ -49,7 +49,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243411928101370036}
-  m_Mesh: {fileID: 573204480112301786, guid: 7513247c7ce44624cbfd038f1585e1e5, type: 3}
+  m_Mesh: {fileID: -3565232397877953052, guid: 47e59abbc2c559b4ab80d895dad1fc0e, type: 3}
 --- !u!23 &5106464601791968309
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -57,7 +57,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243411928101370036}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -539,11 +539,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rhinovirus_v03
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 7513247c7ce44624cbfd038f1585e1e5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7513247c7ce44624cbfd038f1585e1e5, type: 3}
