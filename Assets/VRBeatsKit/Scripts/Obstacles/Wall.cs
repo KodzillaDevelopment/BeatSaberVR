@@ -51,7 +51,7 @@ namespace VRBeats
             if (timer >= deadTime && canKillPlayer)
             {               
                 canKillPlayer = false;
-                onGameOver.Invoke();
+                //onGameOver.Invoke();
             }
 
         }

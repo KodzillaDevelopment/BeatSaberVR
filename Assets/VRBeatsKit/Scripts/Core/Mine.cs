@@ -42,7 +42,7 @@ namespace VRBeats
         public void OnCut( DamageInfo info )
         {
             onMineSlice.Invoke();
-            onGameOver.Invoke();
+            //onGameOver.Invoke();
         }
 
         private bool ShouldKill()

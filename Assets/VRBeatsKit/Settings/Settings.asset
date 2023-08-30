@@ -18,6 +18,6 @@ MonoBehaviour:
   targetTravelDistance: 40
   targetTravelTime: 0.5
   targetTravelEase: 19
-  errorLimit: 7
+  errorLimit: 60
   scorePerHit: 50
   maxMultiplier: 8

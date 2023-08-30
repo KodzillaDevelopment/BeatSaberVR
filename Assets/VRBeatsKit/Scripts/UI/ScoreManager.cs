@@ -13,18 +13,23 @@ namespace VRBeats
         [SerializeField] private float scoreFollowTime = 1.0f;
         [SerializeField] private CanvasGroup canvasGroup = null;
         [SerializeField] private GameEvent onGameOver = null;
+        [SerializeField] Text correctNumbersText;
+        [SerializeField] Text errorNumbersText;
 
         private int maxMultiplier = 0;
         private int scorePerHit = 0;
         private int currentScore = 0;
         private int currentMultiplier = 0;
         private int toNextMultiplierIncrease = 2;
-        private int acumulateCorrectSlices = 0;
-        private int acumulateErrors = 0;
+        public int acumulateCorrectSlices = 0;
+        public int acumulateErrors = 0;
         private int errorLimit = 0;
         private float visualScore = 0.0f;
         private int scoreTweenID = -1;
         private int loaderTweenID = -1;
+
+        public static int correctNumber = 0;
+        public static bool canErrorIncrease = true;
 
         private bool destroyed = false;
 
@@ -42,8 +47,11 @@ namespace VRBeats
             scorePerHit = VR_BeatManager.instance.GameSettings.ScorePerHit;
             errorLimit = VR_BeatManager.instance.GameSettings.ErrorLimit;
             multiplierLoader.fillAmount = 0.0f;
-        }       
-
+        }
+        private void OnEnable()
+        {
+            correctNumber = 0;
+        }
         public void OnGameOver()
         {            
             gameObject.CancelAllTweens();
@@ -74,6 +82,7 @@ namespace VRBeats
             Debug.Log("Error limit is : " + errorLimit);
             Debug.Log("Current score is : " + currentScore);
             Debug.Log("Accumulate errors is : " + acumulateErrors);
+            Debug.Log("Accumulate correct is : " + acumulateCorrectSlices);
 
             UpdateUI();
         }
@@ -83,7 +92,14 @@ namespace VRBeats
             if (destroyed)
                 return;
 
-            acumulateErrors = 0;
+            correctNumber++;
+
+            if (correctNumber % 10 == 0)
+            {
+                canErrorIncrease = false;
+                FindObjectOfType<GameEventManager>().OpenShield();
+            }
+            //acumulateErrors = 0;
             acumulateCorrectSlices++;
             currentScore += scorePerHit + (scorePerHit * currentMultiplier);
 
@@ -130,18 +146,21 @@ namespace VRBeats
             if (destroyed)
                 return;
 
-            acumulateErrors++;
-            acumulateCorrectSlices = 0;
-            currentMultiplier = 0;
-            toNextMultiplierIncrease = 2;
-
-            UpdateMultiplierLoaderValue();
-
-            if (acumulateErrors > errorLimit)
+            if (canErrorIncrease)
             {
-                onGameOver.Invoke();
-            }
+                acumulateErrors++;
+                acumulateCorrectSlices = 0;
+                currentMultiplier = 0;
+                toNextMultiplierIncrease = 2;
 
+                UpdateMultiplierLoaderValue();
+
+                if (acumulateErrors > errorLimit)
+                {
+                    //onGameOver.Invoke();
+                }
+            }
+            
         }
 
         private void UpdateUI()
@@ -151,6 +170,8 @@ namespace VRBeats
 
             multiplierLabel.text = currentMultiplier.ToString();
             scoreLabel.text = Mathf.CeilToInt( visualScore ).ToString();
+            correctNumbersText.text = correctNumber.ToString();
+            errorNumbersText.text = acumulateErrors.ToString();
         }
 
         private void IncreaseMultiplier()
