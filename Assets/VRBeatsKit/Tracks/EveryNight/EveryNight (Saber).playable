@@ -1,28 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9111454632367835575
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff600427e566994ea055d6ca03533ef, type: 3}
-  m_Name: VR_Beat Spawn Marker
-  m_EditorClassIdentifier: 
-  m_Time: 117.30000000000001
-  spawneable: {fileID: 7534675205999449639, guid: 336be1081630a20448abc0dc1bc320a6,
-    type: 3}
-  spawInfo:
-    hitDirection: 7
-    colorSide: 1
-    useSpark: 1
-    position: {x: -0.75, y: -0.25, z: 0.7}
-    rotation: {x: 0, y: 0, z: 0}
-    speed: 6
-    speedMultiplier: -1
 --- !u!114 &-9011777617313456423
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -62,7 +39,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 8
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.75, y: -0.4, z: 0.8}
@@ -85,33 +62,10 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 6
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: 0.3, y: 0.3, z: 0.75}
-    rotation: {x: 0, y: 0, z: 0}
-    speed: 5
-    speedMultiplier: -1
---- !u!114 &-8631067774806220903
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff600427e566994ea055d6ca03533ef, type: 3}
-  m_Name: VR_Beat Spawn Marker
-  m_EditorClassIdentifier: 
-  m_Time: 71.30000000000001
-  spawneable: {fileID: 7534675205999449639, guid: 336be1081630a20448abc0dc1bc320a6,
-    type: 3}
-  spawInfo:
-    hitDirection: 1
-    colorSide: 1
-    useSpark: 1
-    position: {x: -0.4, y: -0.15, z: 0.8}
     rotation: {x: 0, y: 0, z: 0}
     speed: 5
     speedMultiplier: -1
@@ -154,7 +108,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 3
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.7, y: 0.2, z: 0.8}
@@ -177,7 +131,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 7
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: -0.3, y: -0.25, z: 0.8}
@@ -200,7 +154,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 7
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.3, y: -0.25, z: 0.7}
@@ -246,7 +200,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 7
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: -0.3, y: -0.25, z: 0.8}
@@ -269,7 +223,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.3, y: 0.4, z: 0.8}
@@ -292,7 +246,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 6
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.75, y: -0.4, z: 0.8}
@@ -315,7 +269,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: 0.6, y: 0.6, z: 1.2}
@@ -338,7 +292,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 7
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.3, y: -0.25, z: 0.7}
@@ -361,7 +315,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 3
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: -0.6, y: 0.2, z: 0.8}
@@ -384,7 +338,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 6
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: 0, y: 0, z: 0.75}
@@ -430,7 +384,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 7
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: -0.3, y: -0.25, z: 0.7}
@@ -453,7 +407,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 8
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: 0.6, y: -0.25, z: 1.2}
@@ -492,7 +446,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.3, y: 0.2, z: 0.8}
@@ -515,7 +469,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 5
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.6, y: 0.2, z: 0.8}
@@ -538,7 +492,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: 0.7, y: 0.2, z: 0.8}
@@ -561,35 +515,12 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 5
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.6, y: 0.2, z: 0.8}
     rotation: {x: 0, y: 0, z: 0}
     speed: 6
-    speedMultiplier: -1
---- !u!114 &-6111489909996878804
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff600427e566994ea055d6ca03533ef, type: 3}
-  m_Name: VR_Beat Spawn Marker
-  m_EditorClassIdentifier: 
-  m_Time: 43.599999999999895
-  spawneable: {fileID: 7534675205999449639, guid: 336be1081630a20448abc0dc1bc320a6,
-    type: 3}
-  spawInfo:
-    hitDirection: 1
-    colorSide: 1
-    useSpark: 1
-    position: {x: 0.4, y: -0.15, z: 0.8}
-    rotation: {x: 0, y: 0, z: 0}
-    speed: 5
     speedMultiplier: -1
 --- !u!114 &-6018059847462490899
 MonoBehaviour:
@@ -607,7 +538,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 3
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: -0.5, y: 0.18, z: 1}
@@ -630,7 +561,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.6, y: -0.25, z: 1.2}
@@ -653,7 +584,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 6
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: 0.3, y: 0.3, z: 0.75}
@@ -676,7 +607,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 8
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.05, y: -0.05, z: 0.75}
@@ -699,7 +630,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 3
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.7, y: 0.2, z: 0.8}
@@ -722,7 +653,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: -0.3, y: -0.25, z: 0.7}
@@ -745,7 +676,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 3
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: -0.6, y: 0.2, z: 0.8}
@@ -768,7 +699,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: 0.6, y: -0.22, z: 0.8}
@@ -791,7 +722,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: -0.3, y: 0.4, z: 0.8}
@@ -837,7 +768,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 7
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.3, y: -0.25, z: 0.8}
@@ -860,7 +791,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 8
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.4, y: -0.4, z: 0.75}
@@ -883,7 +814,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 8
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.75, y: -0.4, z: 0.8}
@@ -929,7 +860,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 3
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.7, y: 0.2, z: 0.8}
@@ -952,7 +883,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: -0.5, y: 0.18, z: 1}
@@ -975,7 +906,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.3, y: 0.4, z: 0.8}
@@ -998,7 +929,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 5
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.6, y: 0.2, z: 0.8}
@@ -1021,7 +952,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 5
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: 0.7, y: 0.2, z: 0.8}
@@ -1044,7 +975,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: -0.3, y: 0.4, z: 0.8}
@@ -1147,29 +1078,6 @@ MonoBehaviour:
     volume: 1
     stereoPan: 0
     spatialBlend: 0
---- !u!114 &-3189090199749874538
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff600427e566994ea055d6ca03533ef, type: 3}
-  m_Name: VR_Beat Spawn Marker
-  m_EditorClassIdentifier: 
-  m_Time: 40.0499999999999
-  spawneable: {fileID: 7534675205999449639, guid: 336be1081630a20448abc0dc1bc320a6,
-    type: 3}
-  spawInfo:
-    hitDirection: 7
-    colorSide: 0
-    useSpark: 1
-    position: {x: 0.75, y: -0.25, z: 0.7}
-    rotation: {x: 0, y: 0, z: 0}
-    speed: 6
-    speedMultiplier: -1
 --- !u!114 &-3161918092337453786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1186,33 +1094,10 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.4, y: -0.15, z: 0.8}
-    rotation: {x: 0, y: 0, z: 0}
-    speed: 5
-    speedMultiplier: -1
---- !u!114 &-2971968573973179231
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff600427e566994ea055d6ca03533ef, type: 3}
-  m_Name: VR_Beat Spawn Marker
-  m_EditorClassIdentifier: 
-  m_Time: 45.483333333333235
-  spawneable: {fileID: 7534675205999449639, guid: 336be1081630a20448abc0dc1bc320a6,
-    type: 3}
-  spawInfo:
-    hitDirection: 1
-    colorSide: 1
-    useSpark: 1
-    position: {x: -0.4, y: -0.15, z: 0.8}
     rotation: {x: 0, y: 0, z: 0}
     speed: 5
     speedMultiplier: -1
@@ -1232,7 +1117,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 6
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.75, y: -0.4, z: 0.8}
@@ -1255,7 +1140,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: -0.3, y: 0.4, z: 0.8}
@@ -1294,7 +1179,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 3
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: -0.6, y: -0.22, z: 0.8}
@@ -1317,7 +1202,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: 0.6, y: 0.6, z: 1.2}
@@ -1340,7 +1225,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.6, y: 0.6, z: 1.2}
@@ -1363,7 +1248,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: 0.3, y: 0.2, z: 0.8}
@@ -1386,7 +1271,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: -0.6, y: -0.22, z: 0.8}
@@ -1409,7 +1294,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 5
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: 0.3, y: 0.2, z: 0.8}
@@ -1432,7 +1317,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: 0.6, y: -0.25, z: 1.2}
@@ -1478,7 +1363,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 5
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.6, y: 0.2, z: 0.8}
@@ -1501,7 +1386,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 2
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: 0.6, y: 0.6, z: 1.2}
@@ -1524,7 +1409,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: 0.6, y: 0.6, z: 1.2}
@@ -1547,33 +1432,10 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 5
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: 0.7, y: 0.2, z: 0.8}
-    rotation: {x: 0, y: 0, z: 0}
-    speed: 5
-    speedMultiplier: -1
---- !u!114 &-1298333137875276230
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff600427e566994ea055d6ca03533ef, type: 3}
-  m_Name: VR_Beat Spawn Marker
-  m_EditorClassIdentifier: 
-  m_Time: 95.89999999999992
-  spawneable: {fileID: 7534675205999449639, guid: 336be1081630a20448abc0dc1bc320a6,
-    type: 3}
-  spawInfo:
-    hitDirection: 1
-    colorSide: 1
-    useSpark: 1
-    position: {x: -0.4, y: -0.15, z: 0.8}
     rotation: {x: 0, y: 0, z: 0}
     speed: 5
     speedMultiplier: -1
@@ -1593,7 +1455,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.3, y: -0.25, z: 0.8}
@@ -1616,7 +1478,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: -0.75, y: -0.25, z: 0.7}
@@ -1639,7 +1501,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: -0.3, y: 0.4, z: 0.8}
@@ -1662,7 +1524,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 6
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: 0.65, y: 0.65, z: 0.75}
@@ -1685,7 +1547,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 5
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: 0.5, y: -0.15, z: 1}
@@ -1708,35 +1570,12 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: 0.7, y: 0.2, z: 0.8}
     rotation: {x: 0, y: 0, z: 0}
     speed: 5
-    speedMultiplier: -1
---- !u!114 &-555636805370500217
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff600427e566994ea055d6ca03533ef, type: 3}
-  m_Name: VR_Beat Spawn Marker
-  m_EditorClassIdentifier: 
-  m_Time: 65.86666666666667
-  spawneable: {fileID: 7534675205999449639, guid: 336be1081630a20448abc0dc1bc320a6,
-    type: 3}
-  spawInfo:
-    hitDirection: 7
-    colorSide: 0
-    useSpark: 1
-    position: {x: 0.75, y: -0.25, z: 0.7}
-    rotation: {x: 0, y: 0, z: 0}
-    speed: 6
     speedMultiplier: -1
 --- !u!114 &-498116564073401085
 MonoBehaviour:
@@ -1776,7 +1615,6 @@ MonoBehaviour:
     - {fileID: -2052816246990344679}
     - {fileID: 4806508115646422721}
     - {fileID: -9011777617313456423}
-    - {fileID: 641851970198619439}
     - {fileID: -8440065187814943822}
     - {fileID: 2032126972214648807}
     - {fileID: -457678733362580192}
@@ -1799,15 +1637,12 @@ MonoBehaviour:
     - {fileID: -2733758920666999623}
     - {fileID: -7268339057161031072}
     - {fileID: -6698198368121376369}
-    - {fileID: -3189090199749874538}
     - {fileID: -1170774455078440553}
     - {fileID: 5522742089705371754}
     - {fileID: 5924683571563904650}
-    - {fileID: -6111489909996878804}
     - {fileID: 3804222154606446033}
     - {fileID: -6295807568528401669}
     - {fileID: 7258123627728925369}
-    - {fileID: -2971968573973179231}
     - {fileID: 3953663246155681887}
     - {fileID: 6369462797030344493}
     - {fileID: 5070702807006418660}
@@ -1836,15 +1671,12 @@ MonoBehaviour:
     - {fileID: -2160428752548665507}
     - {fileID: 2907322994472033125}
     - {fileID: -5229965616230402142}
-    - {fileID: -555636805370500217}
-    - {fileID: 5042261324747806097}
     - {fileID: -6018059847462490899}
     - {fileID: 4859435472685408316}
     - {fileID: -3161918092337453786}
     - {fileID: -3453928619305657512}
     - {fileID: 4339539733688247115}
     - {fileID: 1691951675720506221}
-    - {fileID: -8631067774806220903}
     - {fileID: -6386866667060494350}
     - {fileID: 9097555309804101007}
     - {fileID: -4378168211950844120}
@@ -1865,15 +1697,12 @@ MonoBehaviour:
     - {fileID: 5123786611960875260}
     - {fileID: 2674965101680098942}
     - {fileID: 5597350353033379982}
-    - {fileID: 7152113300007311155}
     - {fileID: 4555911064090177}
     - {fileID: -904163794619787271}
     - {fileID: -4125348025640712867}
-    - {fileID: 3193352759038731483}
     - {fileID: -2279651047841788104}
     - {fileID: -1712831151734360902}
     - {fileID: -5278345012854523578}
-    - {fileID: -1298333137875276230}
     - {fileID: -251650163839587923}
     - {fileID: 5809591369999712232}
     - {fileID: 6139059284992955173}
@@ -1902,12 +1731,9 @@ MonoBehaviour:
     - {fileID: 3194342070169827814}
     - {fileID: 1664440592209881086}
     - {fileID: 8514998148034251354}
-    - {fileID: 6959346018823294501}
-    - {fileID: -9111454632367835575}
     - {fileID: 7366629329168725253}
     - {fileID: 2513252735856120701}
     - {fileID: -2136352425667903132}
-    - {fileID: 1867521182860463971}
     - {fileID: -703275035501139245}
     - {fileID: -4192471858257103304}
     - {fileID: 8205362984119994363}
@@ -1985,7 +1811,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.3, y: 0.2, z: 0.8}
@@ -2030,7 +1856,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: -0.75, y: -0.25, z: 0.7}
@@ -2060,29 +1886,6 @@ MonoBehaviour:
     rotation: {x: 0, y: 90, z: 0}
     speed: 5
     speedMultiplier: -1
---- !u!114 &641851970198619439
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff600427e566994ea055d6ca03533ef, type: 3}
-  m_Name: VR_Beat Spawn Marker
-  m_EditorClassIdentifier: 
-  m_Time: 19
-  spawneable: {fileID: 7534675205999449639, guid: 336be1081630a20448abc0dc1bc320a6,
-    type: 3}
-  spawInfo:
-    hitDirection: 1
-    colorSide: 1
-    useSpark: 1
-    position: {x: 0.4, y: -0.15, z: 0.8}
-    rotation: {x: 0, y: 0, z: 0}
-    speed: 5
-    speedMultiplier: -1
 --- !u!114 &847063437865165654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2099,7 +1902,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: -0.3, y: 0.4, z: 0.8}
@@ -2138,7 +1941,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: -0.3, y: -0.3, z: 0.75}
@@ -2224,7 +2027,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.5, y: 0.8, z: 1.2}
@@ -2247,7 +2050,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 7
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.3, y: -0.25, z: 0.7}
@@ -2270,7 +2073,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 3
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.7, y: 0.2, z: 0.8}
@@ -2293,7 +2096,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.6, y: -0.25, z: 1.2}
@@ -2316,35 +2119,12 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 3
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: -0.6, y: 0.2, z: 0.8}
     rotation: {x: 0, y: 0, z: 0}
     speed: 6
-    speedMultiplier: -1
---- !u!114 &1867521182860463971
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff600427e566994ea055d6ca03533ef, type: 3}
-  m_Name: VR_Beat Spawn Marker
-  m_EditorClassIdentifier: 
-  m_Time: 120.85000000000002
-  spawneable: {fileID: 7534675205999449639, guid: 336be1081630a20448abc0dc1bc320a6,
-    type: 3}
-  spawInfo:
-    hitDirection: 1
-    colorSide: 1
-    useSpark: 1
-    position: {x: 0.4, y: -0.15, z: 0.8}
-    rotation: {x: 0, y: 0, z: 0}
-    speed: 5
     speedMultiplier: -1
 --- !u!114 &2032126972214648807
 MonoBehaviour:
@@ -2385,7 +2165,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 7
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: -0.3, y: -0.25, z: 0.8}
@@ -2408,7 +2188,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 5
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: 0.6, y: -0.22, z: 0.8}
@@ -2431,7 +2211,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 6
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.45, y: -0.1, z: 0.8}
@@ -2454,7 +2234,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: 0.5, y: -0.15, z: 1}
@@ -2477,7 +2257,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: 0.6, y: -0.22, z: 0.8}
@@ -2500,7 +2280,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: 0.6, y: -0.25, z: 1.2}
@@ -2523,7 +2303,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 7
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.3, y: -0.25, z: 0.7}
@@ -2546,7 +2326,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.5, y: 0.8, z: 1.2}
@@ -2569,7 +2349,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 7
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.3, y: -0.25, z: 0.7}
@@ -2615,35 +2395,12 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: 0.6, y: 0.6, z: 1.2}
     rotation: {x: 0, y: 0, z: 0}
     speed: 7
-    speedMultiplier: -1
---- !u!114 &3193352759038731483
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff600427e566994ea055d6ca03533ef, type: 3}
-  m_Name: VR_Beat Spawn Marker
-  m_EditorClassIdentifier: 
-  m_Time: 94.01666666666657
-  spawneable: {fileID: 7534675205999449639, guid: 336be1081630a20448abc0dc1bc320a6,
-    type: 3}
-  spawInfo:
-    hitDirection: 1
-    colorSide: 1
-    useSpark: 1
-    position: {x: 0.4, y: -0.15, z: 0.8}
-    rotation: {x: 0, y: 0, z: 0}
-    speed: 5
     speedMultiplier: -1
 --- !u!114 &3194342070169827814
 MonoBehaviour:
@@ -2661,7 +2418,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: -0.6, y: 0.2, z: 0.8}
@@ -2684,7 +2441,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 8
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.45, y: -0.1, z: 0.8}
@@ -2707,7 +2464,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 6
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: 0, y: 0, z: 0.75}
@@ -2730,7 +2487,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 5
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: 0.3, y: 0.2, z: 0.8}
@@ -2753,7 +2510,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.3, y: 0.2, z: 0.8}
@@ -2776,7 +2533,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 6
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: -0.3, y: -0.3, z: 0.75}
@@ -2799,7 +2556,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: 0.6, y: -0.22, z: 0.8}
@@ -2845,7 +2602,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 5
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: 0.3, y: 0.2, z: 0.8}
@@ -2868,7 +2625,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: 0.6, y: -0.25, z: 1.2}
@@ -2891,7 +2648,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.6, y: -0.25, z: 1.2}
@@ -2937,7 +2694,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: -0.3, y: 0.3, z: 0.75}
@@ -2960,7 +2717,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: 0.5, y: -0.15, z: 1}
@@ -2983,35 +2740,12 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.3, y: -0.25, z: 0.8}
     rotation: {x: 0, y: 0, z: 0}
     speed: 5
-    speedMultiplier: -1
---- !u!114 &5042261324747806097
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff600427e566994ea055d6ca03533ef, type: 3}
-  m_Name: VR_Beat Spawn Marker
-  m_EditorClassIdentifier: 
-  m_Time: 65.86666666666667
-  spawneable: {fileID: 7534675205999449639, guid: 336be1081630a20448abc0dc1bc320a6,
-    type: 3}
-  spawInfo:
-    hitDirection: 7
-    colorSide: 1
-    useSpark: 1
-    position: {x: -0.75, y: -0.25, z: 0.7}
-    rotation: {x: 0, y: 0, z: 0}
-    speed: 6
     speedMultiplier: -1
 --- !u!114 &5070702807006418660
 MonoBehaviour:
@@ -3029,7 +2763,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 8
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.75, y: -0.4, z: 0.8}
@@ -3052,7 +2786,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: -0.6, y: -0.22, z: 0.8}
@@ -3098,7 +2832,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 0
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.6, y: 0.6, z: 1.2}
@@ -3144,7 +2878,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 8
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.75, y: -0.4, z: 0.8}
@@ -3167,7 +2901,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: -0.5, y: 0.18, z: 1}
@@ -3190,7 +2924,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 7
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: -0.3, y: -0.25, z: 0.7}
@@ -3213,7 +2947,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.3, y: 0.4, z: 0.8}
@@ -3236,7 +2970,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: 0.6, y: -0.25, z: 1.2}
@@ -3259,7 +2993,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 6
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.75, y: -0.4, z: 0.8}
@@ -3282,7 +3016,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 6
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.75, y: -0.4, z: 0.8}
@@ -3305,7 +3039,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 5
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: 0.5, y: -0.15, z: 1}
@@ -3328,7 +3062,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.6, y: 0.6, z: 1.2}
@@ -3351,7 +3085,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.75, y: -0.4, z: 0.8}
@@ -3374,7 +3108,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.45, y: -0.1, z: 0.8}
@@ -3397,7 +3131,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 8
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.45, y: -0.1, z: 0.8}
@@ -3420,7 +3154,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.3, y: 0.4, z: 0.8}
@@ -3443,7 +3177,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 8
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.45, y: -0.1, z: 0.8}
@@ -3466,7 +3200,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 6
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.6, y: -0.25, z: 1.2}
@@ -3505,7 +3239,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.6, y: -0.25, z: 1.2}
@@ -3528,7 +3262,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 6
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.45, y: -0.1, z: 0.8}
@@ -3551,7 +3285,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.3, y: 0.4, z: 0.8}
@@ -3597,7 +3331,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: -0.65, y: 0.65, z: 0.75}
@@ -3620,58 +3354,12 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 8
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: -0.65, y: 0.65, z: 0.75}
     rotation: {x: 0, y: 0, z: 0}
     speed: 5
-    speedMultiplier: -1
---- !u!114 &6959346018823294501
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff600427e566994ea055d6ca03533ef, type: 3}
-  m_Name: VR_Beat Spawn Marker
-  m_EditorClassIdentifier: 
-  m_Time: 117.30000000000001
-  spawneable: {fileID: 7534675205999449639, guid: 336be1081630a20448abc0dc1bc320a6,
-    type: 3}
-  spawInfo:
-    hitDirection: 7
-    colorSide: 0
-    useSpark: 1
-    position: {x: 0.75, y: -0.25, z: 0.7}
-    rotation: {x: 0, y: 0, z: 0}
-    speed: 6
-    speedMultiplier: -1
---- !u!114 &7152113300007311155
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff600427e566994ea055d6ca03533ef, type: 3}
-  m_Name: VR_Beat Spawn Marker
-  m_EditorClassIdentifier: 
-  m_Time: 90.46666666666658
-  spawneable: {fileID: 7534675205999449639, guid: 336be1081630a20448abc0dc1bc320a6,
-    type: 3}
-  spawInfo:
-    hitDirection: 7
-    colorSide: 0
-    useSpark: 1
-    position: {x: 0.75, y: -0.25, z: 0.7}
-    rotation: {x: 0, y: 0, z: 0}
-    speed: 6
     speedMultiplier: -1
 --- !u!114 &7258123627728925369
 MonoBehaviour:
@@ -3689,7 +3377,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 3
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.7, y: 0.2, z: 0.8}
@@ -3712,7 +3400,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 3
+    hitDirection: 4
     colorSide: 1
     useSpark: 0
     position: {x: -0.5, y: 0.18, z: 1}
@@ -3735,7 +3423,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: 0.65, y: 0.65, z: 0.75}
@@ -3781,7 +3469,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 3
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: -0.6, y: -0.22, z: 0.8}
@@ -3804,7 +3492,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 8
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: -0.3, y: 0.3, z: 0.75}
@@ -3873,7 +3561,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 8
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.45, y: -0.1, z: 0.8}
@@ -3896,7 +3584,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 8
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.4, y: -0.4, z: 0.75}
@@ -3919,7 +3607,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.3, y: -0.25, z: 0.8}
@@ -3942,7 +3630,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: -0.3, y: -0.25, z: 0.7}
@@ -3965,7 +3653,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.3, y: 0.2, z: 0.8}
@@ -3988,7 +3676,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 8
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.05, y: -0.05, z: 0.75}
@@ -4034,7 +3722,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.3, y: -0.25, z: 0.8}
@@ -4057,7 +3745,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 7
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: -0.3, y: -0.25, z: 0.8}
@@ -4080,7 +3768,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 8
+    hitDirection: 4
     colorSide: 1
     useSpark: 1
     position: {x: 0.45, y: -0.1, z: 0.8}
@@ -4103,7 +3791,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.45, y: -0.1, z: 0.8}
@@ -4126,7 +3814,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 1
+    hitDirection: 4
     colorSide: 0
     useSpark: 0
     position: {x: -0.6, y: 0.6, z: 1.2}
@@ -4149,7 +3837,7 @@ MonoBehaviour:
   spawneable: {fileID: -8967289558340754843, guid: bb7b882687a40164bb90e774b8e93c2c,
     type: 3}
   spawInfo:
-    hitDirection: 7
+    hitDirection: 4
     colorSide: 0
     useSpark: 1
     position: {x: -0.3, y: -0.25, z: 0.8}

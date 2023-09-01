@@ -7,7 +7,7 @@ namespace VRBeats
     {
         [SerializeField] private MaterialBindings enviromentMaterialBindings = null;
         [SerializeField] private float lightsOffTime = 0.5f;
-        [SerializeField] private float startingEmmisiveValue = 5.0f;
+        [SerializeField] private float startingEmmisiveValue = 1.0f;
         [SerializeField] private Color startingEmmisiveColor = Color.black;
 
         private float currentEmmisiveValue = 0.0f;

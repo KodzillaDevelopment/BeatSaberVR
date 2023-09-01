@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightColor: {r: 0, g: 0.6002884, b: 1, a: 1}
   leftColor: {r: 1, g: 0, b: 0, a: 1}
-  glowIntensity: 100
+  glowIntensity: 10
   targetTravelDistance: 40
   targetTravelTime: 0.5
   targetTravelEase: 19
