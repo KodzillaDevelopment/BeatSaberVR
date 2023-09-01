@@ -6,13 +6,21 @@ using UnityEngine.UI;
 
 public class GameEventManager : MonoBehaviour
 {
+    public static GameEventManager instance;
+
     [SerializeField] GameObject[] startParticles = new GameObject[4];
     [SerializeField] GameObject[] blueParticles = new GameObject[4];
     [SerializeField] GameObject[] redParticles = new GameObject[4];
     [SerializeField] GameObject shieldObject;
     [SerializeField] Text notificationText;
+    public Text etkisizHaleGetirir;
     private float timer = 5.5f;
     private int second;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private IEnumerator Start()
     {

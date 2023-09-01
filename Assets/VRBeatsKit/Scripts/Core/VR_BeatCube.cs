@@ -1,4 +1,5 @@
 ﻿using DamageSystem;
+using System.Collections;
 using UnityEngine;
 using VRBeats.ScriptableEvents;
 
@@ -51,6 +52,8 @@ namespace VRBeats
 
         public void OnCut(DamageInfo info)
         {
+            StartCoroutine(StopShowText());
+            GameEventManager.instance.etkisizHaleGetirir.enabled = true;
             canBeKilled = false;
 
             //notify to whoever is listening that the player did a correct/incorrect slice
@@ -64,7 +67,11 @@ namespace VRBeats
             }            
 
         }
-
+        IEnumerator StopShowText()
+        {
+            yield return new WaitForSeconds(1.5f);
+            GameEventManager.instance.etkisizHaleGetirir.enabled = false;
+        }
         private bool IsCutIntentValid(BeatDamageInfo info)
         {
             if (info == null) return false;
