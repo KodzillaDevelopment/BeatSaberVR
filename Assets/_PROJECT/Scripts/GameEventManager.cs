@@ -2,12 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using VRBeats;
+using UnityEngine.UI;
 
 public class GameEventManager : MonoBehaviour
 {
+    [SerializeField] GameObject[] startParticles = new GameObject[4];
     [SerializeField] GameObject[] blueParticles = new GameObject[4];
     [SerializeField] GameObject[] redParticles = new GameObject[4];
     [SerializeField] GameObject shieldObject;
+    [SerializeField] Text notificationText;
+    private float timer = 5.5f;
+    private int second;
+
+    private IEnumerator Start()
+    {
+        while (timer >= 0)
+        {
+            timer -= Time.deltaTime;
+            second = (int)timer;
+            notificationText.text = second.ToString();
+            yield return null;
+        }
+        foreach (var item in startParticles)
+        {
+            item.SetActive(true);
+            notificationText.text = "";
+        }
+    }
+
+    private void Update()
+    {
+    }
 
     public void LosePoint()
     {
@@ -37,15 +62,17 @@ public class GameEventManager : MonoBehaviour
         go.SetActive(false);
     }
 
-    public void OpenShield ()
+    public void OpenShield()
     {
         shieldObject.SetActive(true);
+        notificationText.text = "KORUR";
         StartCoroutine(GetBackShield());
     }
 
     IEnumerator GetBackShield()
     {
         yield return new WaitForSeconds(10f);
+        notificationText.text = "";
         shieldObject.SetActive(false);
         ScoreManager.canErrorIncrease = true;
     }

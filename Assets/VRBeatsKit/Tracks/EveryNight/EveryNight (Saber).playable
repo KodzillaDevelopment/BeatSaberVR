@@ -1462,29 +1462,6 @@ MonoBehaviour:
     rotation: {x: 0, y: 0, z: 0}
     speed: 6
     speedMultiplier: -1
---- !u!114 &-2549775165565636886
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ff600427e566994ea055d6ca03533ef, type: 3}
-  m_Name: VR_Beat Spawn Marker
-  m_EditorClassIdentifier: 
-  m_Time: 3.6
-  spawneable: {fileID: 7534675205999449639, guid: 336be1081630a20448abc0dc1bc320a6,
-    type: 3}
-  spawInfo:
-    hitDirection: 4
-    colorSide: 1
-    useSpark: 0
-    position: {x: 0.6, y: -0.25, z: 1.2}
-    rotation: {x: 0, y: 0, z: 0}
-    speed: 5
-    speedMultiplier: -1
 --- !u!114 &-2544977018861552891
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1991,7 +1968,6 @@ MonoBehaviour:
   m_Clips: []
   m_Markers:
     m_Objects:
-    - {fileID: -2549775165565636886}
     - {fileID: 4264544954742832685}
     - {fileID: 8848478754003153753}
     - {fileID: -7965383483737650431}
