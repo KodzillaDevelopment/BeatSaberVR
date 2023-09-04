@@ -16,6 +16,8 @@ namespace VRBeats
 
         private void OnClick()
         {
+            ScoreManager.correctNumber = 0;
+
             SceneManager.LoadScene(sceneName);
         }
     }

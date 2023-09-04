@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using Platinio.TweenEngine;
 using VRBeats.ScriptableEvents;
+using System.Collections;
 
 namespace VRBeats
 {
@@ -53,20 +54,20 @@ namespace VRBeats
             correctNumber = 0;
         }
         public void OnGameOver()
-        {            
+        {
             gameObject.CancelAllTweens();
             canvasGroup.Fade(0.0f, 0.5f).SetEase(Ease.EaseOutExpo).SetOwner(gameObject);
         }
 
         public void OnGameRestart()
-        {            
+        {
             ResetThisComponent();
             gameObject.CancelAllTweens();
             canvasGroup.Fade(1.0f, 0.5f).SetEase(Ease.EaseOutExpo).SetOwner(gameObject);
         }
 
         public void ResetThisComponent()
-        {           
+        {
             currentMultiplier = 0;
             currentScore = 0;
             acumulateCorrectSlices = 0;
@@ -94,10 +95,23 @@ namespace VRBeats
 
             correctNumber++;
 
-            if (correctNumber % 10 == 0)
+            if (correctNumber > 25 && correctNumber % 10 == 0)
             {
                 canErrorIncrease = false;
                 FindObjectOfType<GameEventManager>().OpenShield();
+            }
+            else if (correctNumber == 5 || correctNumber == 15 || correctNumber == 25)
+            {
+                foreach (var item in FindObjectsOfType<VR_BeatCube>())
+                {
+                    if (item.gameObject.activeInHierarchy)
+                    {
+                        item.canMove = false;
+                        item.particles.SetActive(true);
+                        StartCoroutine(ShowBubbles(item));
+                        FindObjectOfType<GameEventManager>().notificationText.text = "HAPSEDER";
+                    }
+                }
             }
             //acumulateErrors = 0;
             acumulateCorrectSlices++;
@@ -105,7 +119,7 @@ namespace VRBeats
 
             CancelTweenById(scoreTweenID);
             scoreTweenID = PlatinioTween.instance.ValueTween(visualScore, currentScore, scoreFollowTime).SetEase(Ease.EaseOutExpo).SetOnUpdateFloat(delegate (float value)
-             {                
+             {
                  visualScore = value;
              }).ID;
 
@@ -119,9 +133,18 @@ namespace VRBeats
 
         }
 
+        IEnumerator ShowBubbles(VR_BeatCube cube)
+        {
+            yield return new WaitForSeconds(3f);
+            cube.onCorrectSlice.Invoke();
+            yield return new WaitForFixedUpdate();
+            cube.Kill();
+            FindObjectOfType<GameEventManager>().notificationText.text = "";
+        }
+
         private void CancelTweenById(int id)
         {
-            if(id != -1)
+            if (id != -1)
                 PlatinioTween.instance.CancelTween(id);
         }
 
@@ -136,7 +159,7 @@ namespace VRBeats
             CancelTweenById(loaderTweenID);
             loaderTweenID = PlatinioTween.instance.ValueTween(multiplierLoader.fillAmount, multiplierLoaderValue, 1.0f).SetEase(Ease.EaseOutExpo).SetOnUpdateFloat(delegate (float value)
             {
-                if(multiplierLoader != null)
+                if (multiplierLoader != null)
                     multiplierLoader.fillAmount = value;
             }).SetOwner(multiplierLoader.gameObject).ID;
         }
@@ -160,7 +183,7 @@ namespace VRBeats
                     //onGameOver.Invoke();
                 }
             }
-            
+
         }
 
         private void UpdateUI()
@@ -169,7 +192,7 @@ namespace VRBeats
                 return;
 
             multiplierLabel.text = currentMultiplier.ToString();
-            scoreLabel.text = Mathf.CeilToInt( visualScore ).ToString();
+            scoreLabel.text = Mathf.CeilToInt(visualScore).ToString();
             correctNumbersText.text = correctNumber.ToString();
             errorNumbersText.text = acumulateErrors.ToString();
         }
@@ -180,27 +203,27 @@ namespace VRBeats
                 return;
 
             acumulateCorrectSlices = 0;
-            currentMultiplier = Mathf.Min( currentMultiplier + 1 , maxMultiplier );
+            currentMultiplier = Mathf.Min(currentMultiplier + 1, maxMultiplier);
             toNextMultiplierIncrease = (currentMultiplier + 1) * 2;
 
             PlatinioTween.instance.CancelTween(multiplierLoader.gameObject);
 
             PlatinioTween.instance.ValueTween(multiplierLoader.fillAmount, 1.0f, 1.0f).SetEase(Ease.EaseOutExpo).SetOnUpdateFloat(delegate (float value)
             {
-                if(multiplierLoader != null)
+                if (multiplierLoader != null)
                     multiplierLoader.fillAmount = value;
-            }).SetOwner(multiplierLoader.gameObject).SetOnComplete( delegate 
-            {
-                if (multiplierLabel != null)
-                {
-                    PlatinioTween.instance.ValueTween(multiplierLoader.fillAmount, 0.0f, 0.5f).SetEase(Ease.EaseOutExpo).SetOnUpdateFloat(delegate (float value)
-                    {
-                        if (multiplierLoader != null)
-                            multiplierLoader.fillAmount = value;
-                    }).SetOwner(multiplierLoader.gameObject);
-                }
-                
-            } );
+            }).SetOwner(multiplierLoader.gameObject).SetOnComplete(delegate
+           {
+               if (multiplierLabel != null)
+               {
+                   PlatinioTween.instance.ValueTween(multiplierLoader.fillAmount, 0.0f, 0.5f).SetEase(Ease.EaseOutExpo).SetOnUpdateFloat(delegate (float value)
+                   {
+                       if (multiplierLoader != null)
+                           multiplierLoader.fillAmount = value;
+                   }).SetOwner(multiplierLoader.gameObject);
+               }
+
+           });
 
         }
 

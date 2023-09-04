@@ -16,6 +16,7 @@ namespace VRBeats.UI
 
         private void TriggerRestartEvent()
         {
+            ScoreManager.correctNumber = 0;
             onRestart.Invoke();
         }
     }

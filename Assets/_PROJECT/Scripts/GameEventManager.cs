@@ -12,7 +12,7 @@ public class GameEventManager : MonoBehaviour
     [SerializeField] GameObject[] blueParticles = new GameObject[4];
     [SerializeField] GameObject[] redParticles = new GameObject[4];
     [SerializeField] GameObject shieldObject;
-    [SerializeField] Text notificationText;
+    public Text notificationText;
     public Text etkisizHaleGetirir;
     private float timer = 5.5f;
     private int second;

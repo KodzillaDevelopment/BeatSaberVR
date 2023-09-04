@@ -9,10 +9,12 @@ namespace VRBeats
     {
         [SerializeField] private float minCutSpeed = 0.5f;
         [SerializeField] private OnSliceAction sliceAction = null;
-        [SerializeField] private GameEvent onCorrectSlice = null;
+        public GameEvent onCorrectSlice = null;
         [SerializeField] private GameEvent onIncorrectSlice = null;
         [SerializeField] private GameEvent onPlayerMiss = null;
 
+        public GameObject particles;
+        public bool canMove = true;
 
         private MaterialBindings materialBindings = null;
         private ColorSide thisColorSide = ColorSide.Right;
@@ -28,7 +30,7 @@ namespace VRBeats
         public ColorSide ThisColorSide { get { return thisColorSide; } }
 
         private void Awake()
-        {            
+        {
             player = VR_BeatManager.instance.Player.transform;
         }
 
@@ -36,12 +38,12 @@ namespace VRBeats
         {
             thisSpawneable = GetComponent<VR_BeatCubeSpawneable>();
             thisSpawneable.onSpawnComplete += delegate { spawnComplete = true; };
-                        
+
             materialBindings = GetComponent<MaterialBindings>();
 
             thisColorSide = thisSpawneable.ColorSide;
             Color color = VR_BeatManager.instance.GetColorFromColorSide(thisColorSide);
-            materialBindings.SetEmmisiveColor( color );          
+            materialBindings.SetEmmisiveColor(color);
 
         }
 
@@ -57,14 +59,14 @@ namespace VRBeats
             canBeKilled = false;
 
             //notify to whoever is listening that the player did a correct/incorrect slice
-            if ( IsCutIntentValid(info as BeatDamageInfo) )
+            if (IsCutIntentValid(info as BeatDamageInfo))
             {
                 onCorrectSlice.Invoke();
             }
             else
             {
                 onIncorrectSlice.Invoke();
-            }            
+            }
 
         }
         IEnumerator StopShowText()
@@ -75,7 +77,7 @@ namespace VRBeats
         private bool IsCutIntentValid(BeatDamageInfo info)
         {
             if (info == null) return false;
-            
+
             if (info.velocity < minCutSpeed) return false;
 
             //no matter the hit direction as soon as we have the right velocity for a cube that has a dot
@@ -89,10 +91,15 @@ namespace VRBeats
 
         private void Update()
         {
-            if(spawnComplete)
-                transform.position += Vector3.forward * thisSpawneable.Speed * Time.deltaTime;
+            if (spawnComplete)
+            {
+                if (canMove)
+                {
+                    transform.position += Vector3.forward * thisSpawneable.Speed * Time.deltaTime;
+                }
+            }
 
-            if ( ShouldKillCube() )
+            if (ShouldKillCube())
             {
                 Kill();
             }
@@ -107,11 +114,11 @@ namespace VRBeats
         {
             onPlayerMiss.Invoke();
             canBeKilled = false;
-            transform.ScaleTween(Vector3.zero, 2.0f).SetEase(Ease.EaseOutExpo).SetOnComplete( delegate 
-            {
-                if(!destroyed)
-                    Destroy(gameObject);
-            } );
+            transform.ScaleTween(Vector3.zero, 2.0f).SetEase(Ease.EaseOutExpo).SetOnComplete(delegate
+           {
+               if (!destroyed)
+                   Destroy(gameObject);
+           });
         }
 
 
