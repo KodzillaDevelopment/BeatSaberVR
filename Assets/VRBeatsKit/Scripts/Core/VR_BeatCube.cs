@@ -12,6 +12,8 @@ namespace VRBeats
         public GameEvent onCorrectSlice = null;
         [SerializeField] private GameEvent onIncorrectSlice = null;
         [SerializeField] private GameEvent onPlayerMiss = null;
+        [SerializeField] Rigidbody rbLeft;
+        [SerializeField] Rigidbody rbRight;
 
         public GameObject particles;
         public bool canMove = true;
@@ -45,6 +47,8 @@ namespace VRBeats
             Color color = VR_BeatManager.instance.GetColorFromColorSide(thisColorSide);
             materialBindings.SetEmmisiveColor(color);
 
+            //rbLeft.AddForce(new Vector3(1, 1, 0) * 100f);
+            //rbRight.AddForce(new Vector3(-1, -1, 0) * 100f);
         }
 
         private void OnDestroy()
@@ -62,6 +66,12 @@ namespace VRBeats
             if (IsCutIntentValid(info as BeatDamageInfo))
             {
                 onCorrectSlice.Invoke();
+                //rbLeft.isKinematic = false;
+                //rbRight.isKinematic = false;
+                //rbLeft.AddForce(new Vector3(0, 0, -1) * 1f);
+                //rbRight.AddForce(new Vector3(0, 0, -1) * 1f);
+                //rbLeft.AddForce(new Vector3(1, 1, 0) * 100f);
+                //rbRight.AddForce(new Vector3(-1, -1, 0) * 100f);
             }
             else
             {

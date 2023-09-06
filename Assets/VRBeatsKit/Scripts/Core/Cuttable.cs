@@ -8,6 +8,8 @@ namespace VRBeats
     public class Cuttable : Damageable
     {
         [SerializeField] private OnDamageEvent onCut = null;
+        [SerializeField] Rigidbody rbLeft;
+        [SerializeField] Rigidbody rbRight;
 
         private Material insideMaterial = null;
 
@@ -34,6 +36,17 @@ namespace VRBeats
 
             if (Cut(info.hitPoint, cutDir, insideMaterial))
             {
+                rbLeft.isKinematic = false;
+                rbRight.isKinematic = false;
+                rbLeft.useGravity = true;
+                rbRight.useGravity = true;
+                rbLeft.AddForce(new Vector3(1, 1, 0) * 1000f);
+                rbRight.AddForce(new Vector3(-1, -1, 0) * 1000f);
+                rbLeft.gameObject.transform.SetParent(null);
+                rbRight.gameObject.transform.SetParent(null);
+                Destroy(rbLeft.gameObject, 1f);
+                Destroy(rbRight.gameObject, 1f);
+
                 Destroy(gameObject);
             }
         }
