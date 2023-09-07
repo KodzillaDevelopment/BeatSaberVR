@@ -10,19 +10,19 @@ namespace VRBeats
         [SerializeField] private float moveTime = 1.0f;
         [SerializeField] private Ease ease = Ease.EaseOutExpo;
         [SerializeField] private OnIntValueChange onIndexValueChange = null;
-        
+
 
         private RectTransform[] elements = null;
 
-        public OnIntValueChange OnIndexValueChange 
+        public OnIntValueChange OnIndexValueChange
         {
-            get 
+            get
             {
                 return onIndexValueChange;
             }
         }
 
-        public int CurrentIndex 
+        public int CurrentIndex
         {
             get
             {
@@ -43,7 +43,7 @@ namespace VRBeats
         private void Start()
         {
             CurrentIndex = transform.childCount - 1;
-            SetupCarouselElements();            
+            SetupCarouselElements();
         }
 
         private void SetupCarouselElements()
@@ -54,15 +54,15 @@ namespace VRBeats
 
             for (int n = 0; n < transform.childCount; n++)
             {
-                
+
                 elements[n] = transform.GetChild(n).GetComponent<RectTransform>();
-                elements[n].anchoredPosition = elements[n].FromAbsolutePositionToAnchoredPosition(new Vector2(x, 0.5f) , viewRect);               
+                elements[n].anchoredPosition = elements[n].FromAbsolutePositionToAnchoredPosition(new Vector2(x, 0.5f), viewRect);
                 x -= 1.0f;
             }
         }
 
         public void MoveLeft()
-        {            
+        {
             if (currentIndex + 1 >= transform.childCount || isBusy)
                 return;
 
@@ -70,21 +70,21 @@ namespace VRBeats
             isBusy = true;
 
             for (int n = 0; n < transform.childCount; n++)
-            {                
+            {
                 Vector2 currentPos = elements[n].FromAnchoredPositionToAbsolutePosition(viewRect);
-                elements[n].MoveUI(currentPos + new Vector2(-1.0f , 0.0f ) , viewRect , moveTime ).SetOnComplete(delegate { isBusy = false; }).SetEase(ease);
+                elements[n].MoveUI(currentPos + new Vector2(-1.0f, 0.0f), viewRect, moveTime).SetOnComplete(delegate { isBusy = false; }).SetEase(ease);
             }
         }
 
         public void MoveRight()
-        {           
+        {
 
             if (currentIndex - 1 < 0 || isBusy)
                 return;
 
 
             CurrentIndex--;
-            isBusy = true;      
+            isBusy = true;
             for (int n = 0; n < transform.childCount; n++)
             {
                 Vector2 currentPos = elements[n].FromAnchoredPositionToAbsolutePosition(viewRect);
@@ -97,7 +97,7 @@ namespace VRBeats
             int offset = currentIndex - index;
             CurrentIndex = index;
             isBusy = true;
-            
+
             for (int n = 0; n < transform.childCount; n++)
             {
                 Vector2 currentPos = elements[n].FromAnchoredPositionToAbsolutePosition(viewRect);

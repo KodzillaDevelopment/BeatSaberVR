@@ -5,14 +5,14 @@ namespace VRBeats
 {
     public class SaberSelectionPanel : MonoBehaviour
     {
-        [SerializeField] private Carousel saberCarousel = null;       
+        [SerializeField] private Carousel saberCarousel = null;
 
         private IEnumerator Start()
         {
-            
+
             yield return new WaitForEndOfFrame();
-       
-            saberCarousel.Focus( VR_SaberContainer.SelectedSaberIndex );
+
+            saberCarousel.Focus(VR_SaberContainer.SelectedSaberIndex);
             saberCarousel.OnIndexValueChange.AddListener(OnSaberSelectionIndexChange);
         }
 
