@@ -98,6 +98,13 @@ namespace VRBeats
             return info.colorSide == ThisColorSide && cutAngle < 80.0f;
         }
 
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.CompareTag("Shield"))
+            {
+                Kill();
+            }    
+        }
 
         private void Update()
         {
@@ -124,7 +131,7 @@ namespace VRBeats
         {
             onPlayerMiss.Invoke();
             canBeKilled = false;
-            transform.ScaleTween(Vector3.zero, 2.0f).SetEase(Ease.EaseOutExpo).SetOnComplete(delegate
+            transform.ScaleTween(Vector3.zero, 1.0f).SetEase(Ease.EaseOutExpo).SetOnComplete(delegate
            {
                if (!destroyed)
                    Destroy(gameObject);

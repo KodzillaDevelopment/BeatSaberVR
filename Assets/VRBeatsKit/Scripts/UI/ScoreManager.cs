@@ -100,7 +100,7 @@ namespace VRBeats
                 canErrorIncrease = false;
                 FindObjectOfType<GameEventManager>().OpenShield();
             }
-            else if (correctNumber == 15 || correctNumber == 25)
+            else if (correctNumber == 5 || correctNumber == 15)
             {
                 foreach (var item in FindObjectsOfType<VR_BeatCube>())
                 {
