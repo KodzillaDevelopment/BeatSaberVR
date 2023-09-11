@@ -142,7 +142,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   renderArray:
   - {fileID: 5106464601791968309}
-  - {fileID: 1049404852160528898}
   onSetMaterialColor:
     m_PersistentCalls:
       m_Calls: []
@@ -295,7 +294,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8222422617091378929
 Transform:
   m_ObjectHideFlags: 0

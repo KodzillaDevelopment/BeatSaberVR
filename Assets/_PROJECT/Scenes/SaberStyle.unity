@@ -3929,7 +3929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1196366361853272, guid: 78afe2d2c6c430649b4c89b6b483db98, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1196366361853272, guid: 78afe2d2c6c430649b4c89b6b483db98, type: 3}
       propertyPath: m_TagString
@@ -3941,7 +3941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1369310977251218, guid: 78afe2d2c6c430649b4c89b6b483db98, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1594465077806204, guid: 78afe2d2c6c430649b4c89b6b483db98, type: 3}
       propertyPath: m_IsActive
@@ -3958,6 +3958,18 @@ PrefabInstance:
     - target: {fileID: 1884562842503716, guid: 78afe2d2c6c430649b4c89b6b483db98, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267974684874662, guid: 78afe2d2c6c430649b4c89b6b483db98, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7867
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267974684874662, guid: 78afe2d2c6c430649b4c89b6b483db98, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7867
+      objectReference: {fileID: 0}
+    - target: {fileID: 4267974684874662, guid: 78afe2d2c6c430649b4c89b6b483db98, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.7867
       objectReference: {fileID: 0}
     - target: {fileID: 4358106544599504, guid: 78afe2d2c6c430649b4c89b6b483db98, type: 3}
       propertyPath: m_RootOrder
@@ -4086,7 +4098,7 @@ PrefabInstance:
     - target: {fileID: 198231528243579062, guid: 78afe2d2c6c430649b4c89b6b483db98,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.a
-      value: 0.03529412
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198231528243579062, guid: 78afe2d2c6c430649b4c89b6b483db98,
         type: 3}
@@ -4191,7 +4203,7 @@ PrefabInstance:
     - target: {fileID: 198600418236694522, guid: 78afe2d2c6c430649b4c89b6b483db98,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.a
-      value: 0.019607844
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198600418236694522, guid: 78afe2d2c6c430649b4c89b6b483db98,
         type: 3}
@@ -6020,6 +6032,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd71238cc7ea464782bc8e3f8d96561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wallInfo:
+    hitDirection: 1
+    colorSide: 1
+    useSpark: 1
+    position: {x: 0.5, y: 0.8, z: 4}
+    rotation: {x: 0, y: 90, z: 0}
+    speed: 5
+    speedMultiplier: 1
+  wallObject: {fileID: -4003994156106257180, guid: 95c798c31321b434b97df390ef7e6f48,
+    type: 3}
   startParticles:
   - {fileID: 1296778273}
   - {fileID: 1751316942}

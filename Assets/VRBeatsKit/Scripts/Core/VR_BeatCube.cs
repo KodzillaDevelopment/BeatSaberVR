@@ -93,9 +93,12 @@ namespace VRBeats
             //no matter the hit direction as soon as we have the right velocity for a cube that has a dot
             if (HitDirection == Direction.Center)
                 return true;
-
-            float cutAngle = Vector2.Angle(transform.up, info.hitDir);
-            return info.colorSide == ThisColorSide && cutAngle < 80.0f;
+            else
+            {
+                return true;
+            }
+            //float cutAngle = Vector2.Angle(transform.up, info.hitDir);
+            //return info.colorSide == ThisColorSide && cutAngle < 80.0f;
         }
 
         private void OnTriggerEnter(Collider other)

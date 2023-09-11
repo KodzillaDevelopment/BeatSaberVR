@@ -106,10 +106,11 @@ namespace VRBeats
                 {
                     if (item.gameObject.activeInHierarchy)
                     {
-                        item.canMove = false;
-                        item.particles.SetActive(true);
+                        StartCoroutine(FindObjectOfType<GameEventManager>().SpawnBubbleWall());
+                        //item.canMove = false;
+                        //item.particles.SetActive(true);
                         StartCoroutine(ShowBubbles(item));
-                        FindObjectOfType<GameEventManager>().notificationText.text = "HAPSEDER";
+                        //FindObjectOfType<GameEventManager>().notificationText.text = "HAPSEDER";
                     }
                 }
             }
@@ -132,14 +133,26 @@ namespace VRBeats
 
 
         }
-
+        private float timer = 3f;
         IEnumerator ShowBubbles(VR_BeatCube cube)
         {
-            yield return new WaitForSeconds(3f);
-            cube.onCorrectSlice.Invoke();
-            yield return new WaitForFixedUpdate();
-            cube.Kill();
-            FindObjectOfType<GameEventManager>().notificationText.text = "";
+            while (timer >= 0)
+            {
+                timer -= Time.deltaTime;
+                cube.canMove = false;
+                cube.particles.SetActive(true);
+                yield return new WaitForSeconds(3f);
+                cube.onCorrectSlice.Invoke();
+                yield return new WaitForFixedUpdate();
+                cube.Kill();
+                if (timer <= 0)
+                {
+                    timer = 3f;
+                }
+                yield return null;
+            }
+            
+            //FindObjectOfType<GameEventManager>().notificationText.text = "";
         }
 
         private void CancelTweenById(int id)

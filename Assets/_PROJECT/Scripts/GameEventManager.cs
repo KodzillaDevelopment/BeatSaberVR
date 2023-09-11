@@ -8,10 +8,14 @@ public class GameEventManager : MonoBehaviour
 {
     public static GameEventManager instance;
 
+    public SpawnEventInfo wallInfo;
+    public Spawneable wallObject;
+
     [SerializeField] GameObject[] startParticles = new GameObject[4];
     [SerializeField] GameObject[] blueParticles = new GameObject[4];
     [SerializeField] GameObject[] redParticles = new GameObject[4];
     [SerializeField] GameObject shieldObject;
+
     public Text notificationText;
     public Text etkisizHaleGetirir;
     private float timer = 5.5f;
@@ -20,6 +24,9 @@ public class GameEventManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+
+        //lastTime = wallInfo.time;
     }
 
     private IEnumerator Start()
@@ -73,15 +80,24 @@ public class GameEventManager : MonoBehaviour
     public void OpenShield()
     {
         shieldObject.SetActive(true);
-        notificationText.text = "KORUR";
+        VR_BeatManager.instance.Spawn(wallObject, wallInfo);
+        //notificationText.text = "KORUR";
         StartCoroutine(GetBackShield());
     }
 
     IEnumerator GetBackShield()
     {
+        wallObject.GetComponentInChildren<Text>().text = "KORUR";
         yield return new WaitForSeconds(10f);
-        notificationText.text = "";
+        //notificationText.text = "";
         shieldObject.SetActive(false);
         ScoreManager.canErrorIncrease = true;
+    }
+
+    public IEnumerator SpawnBubbleWall()
+    {
+        VR_BeatManager.instance.Spawn(wallObject, wallInfo);
+        yield return new WaitForFixedUpdate();
+        wallObject.GetComponentInChildren<Text>().text = "HAPSEDER";
     }
 }
