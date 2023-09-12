@@ -3929,7 +3929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1196366361853272, guid: 78afe2d2c6c430649b4c89b6b483db98, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1196366361853272, guid: 78afe2d2c6c430649b4c89b6b483db98, type: 3}
       propertyPath: m_TagString
@@ -4784,6 +4784,75 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1001 &1372357688
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 01101d55b4f054b4da0ce5819090fe86,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 01101d55b4f054b4da0ce5819090fe86,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 01101d55b4f054b4da0ce5819090fe86,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 01101d55b4f054b4da0ce5819090fe86,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.56
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 01101d55b4f054b4da0ce5819090fe86,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.1821104
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 01101d55b4f054b4da0ce5819090fe86,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.22949311
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 01101d55b4f054b4da0ce5819090fe86,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5943267
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 01101d55b4f054b4da0ce5819090fe86,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7489624
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 01101d55b4f054b4da0ce5819090fe86,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -76.866
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 01101d55b4f054b4da0ce5819090fe86,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 34.072
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 01101d55b4f054b4da0ce5819090fe86,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 01101d55b4f054b4da0ce5819090fe86,
+        type: 3}
+      propertyPath: m_Name
+      value: sanofi logo 3d
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 01101d55b4f054b4da0ce5819090fe86, type: 3}
 --- !u!1001 &1372692933
 PrefabInstance:
   m_ObjectHideFlags: 0

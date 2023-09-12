@@ -102,17 +102,17 @@ namespace VRBeats
             }
             else if (correctNumber == 5 || correctNumber == 15)
             {
-                foreach (var item in FindObjectsOfType<VR_BeatCube>())
-                {
-                    if (item.gameObject.activeInHierarchy)
-                    {
-                        StartCoroutine(FindObjectOfType<GameEventManager>().SpawnBubbleWall());
-                        //item.canMove = false;
-                        //item.particles.SetActive(true);
-                        StartCoroutine(ShowBubbles(item));
-                        //FindObjectOfType<GameEventManager>().notificationText.text = "HAPSEDER";
-                    }
-                }
+                StartCoroutine(FindObjectOfType<GameEventManager>().SpawnBubbleWall());
+                StartCoroutine(ShowBubbles());
+                //foreach (var item in FindObjectsOfType<VR_BeatCube>())
+                //{
+                //    if (item.gameObject.activeInHierarchy)
+                //    {
+                //        //item.canMove = false;
+                //        //item.particles.SetActive(true);
+                //        //FindObjectOfType<GameEventManager>().notificationText.text = "HAPSEDER";
+                //    }
+                //}
             }
             //acumulateErrors = 0;
             acumulateCorrectSlices++;
@@ -134,24 +134,34 @@ namespace VRBeats
 
         }
         private float timer = 3f;
-        IEnumerator ShowBubbles(VR_BeatCube cube)
+        IEnumerator ShowBubbles()
         {
             while (timer >= 0)
             {
                 timer -= Time.deltaTime;
-                cube.canMove = false;
-                cube.particles.SetActive(true);
-                yield return new WaitForSeconds(3f);
-                cube.onCorrectSlice.Invoke();
-                yield return new WaitForFixedUpdate();
-                cube.Kill();
+                foreach (var item in FindObjectsOfType<VR_BeatCube>())
+                {
+                    if (item.gameObject.activeInHierarchy)
+                    {
+                        item.canMove = false;
+                        item.particles.SetActive(true);
+                        yield return new WaitForSeconds(3f);
+                        item.onCorrectSlice.Invoke();
+                        yield return new WaitForFixedUpdate();
+                        item.Kill();
+                        //item.canMove = false;
+                        //item.particles.SetActive(true);
+                        //StartCoroutine(ShowBubbles(item));
+                        //FindObjectOfType<GameEventManager>().notificationText.text = "HAPSEDER";
+                    }
+                }
                 if (timer <= 0)
                 {
                     timer = 3f;
                 }
                 yield return null;
             }
-            
+
             //FindObjectOfType<GameEventManager>().notificationText.text = "";
         }
 
