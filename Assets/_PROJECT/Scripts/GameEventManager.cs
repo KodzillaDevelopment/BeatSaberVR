@@ -10,6 +10,7 @@ public class GameEventManager : MonoBehaviour
 
     public SpawnEventInfo wallInfo;
     public Spawneable wallObject;
+    public Spawneable wallObjectForCube;
 
     [SerializeField] GameObject[] startParticles = new GameObject[4];
     [SerializeField] GameObject[] blueParticles = new GameObject[4];
@@ -22,6 +23,7 @@ public class GameEventManager : MonoBehaviour
     private int second;
     public bool canSave;
     public bool canHold;
+    public bool canSpawnWall = true;
 
     private void Awake()
     {
@@ -49,7 +51,7 @@ public class GameEventManager : MonoBehaviour
     }
     public void SpawnWallForCube()
     {
-        VR_BeatManager.instance.Spawn(wallObject, wallInfo);
+        VR_BeatManager.instance.Spawn(wallObjectForCube, wallInfo);
     }
 
     public void LosePoint()

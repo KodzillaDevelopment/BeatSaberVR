@@ -3919,7 +3919,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 408071456}
     m_Modifications:
+    - target: {fileID: 1015052818948458, guid: 78afe2d2c6c430649b4c89b6b483db98, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1028469659159180, guid: 78afe2d2c6c430649b4c89b6b483db98, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1102522151634918, guid: 78afe2d2c6c430649b4c89b6b483db98, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -3935,6 +3943,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Shield
       objectReference: {fileID: 0}
+    - target: {fileID: 1299731595518198, guid: 78afe2d2c6c430649b4c89b6b483db98, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1312958519413030, guid: 78afe2d2c6c430649b4c89b6b483db98, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -3943,7 +3955,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1443470532973942, guid: 78afe2d2c6c430649b4c89b6b483db98, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1594465077806204, guid: 78afe2d2c6c430649b4c89b6b483db98, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1670779147013284, guid: 78afe2d2c6c430649b4c89b6b483db98, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -6111,6 +6131,8 @@ MonoBehaviour:
     speedMultiplier: 1
   wallObject: {fileID: -4003994156106257180, guid: 95c798c31321b434b97df390ef7e6f48,
     type: 3}
+  wallObjectForCube: {fileID: -4003994156106257180, guid: 02c244c0219813540b8a79864026f45d,
+    type: 3}
   startParticles:
   - {fileID: 1296778273}
   - {fileID: 1751316942}
@@ -6129,6 +6151,9 @@ MonoBehaviour:
   shieldObject: {fileID: 1251446393}
   notificationText: {fileID: 1783614004}
   etkisizHaleGetirir: {fileID: 701964019}
+  canSave: 0
+  canHold: 0
+  canSpawnWall: 1
 --- !u!1 &1635870281
 GameObject:
   m_ObjectHideFlags: 0

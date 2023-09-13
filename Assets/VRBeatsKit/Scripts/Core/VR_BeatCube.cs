@@ -26,7 +26,6 @@ namespace VRBeats
         private bool canBeKilled = true;
         private bool spawnComplete = false;
         private bool destroyed = false;
-        private bool canSpawnWall = true;
 
         public float MinCutSpeed { get { return minCutSpeed; } }
         public Direction HitDirection { get { return thisSpawneable.HitDirection; } }
@@ -73,10 +72,10 @@ namespace VRBeats
             //notify to whoever is listening that the player did a correct/incorrect slice
             if (IsCutIntentValid(info as BeatDamageInfo))
             {
-                if (canSpawnWall)
+                if (GameEventManager.instance.canSpawnWall)
                 {
                     GameEventManager.instance.SpawnWallForCube();
-                    canSpawnWall = false;
+                    GameEventManager.instance.canSpawnWall = false;
                 }
                 onCorrectSlice.Invoke();
                 //rbLeft.isKinematic = false;
@@ -147,10 +146,10 @@ namespace VRBeats
         {
             onPlayerMiss.Invoke();
             canBeKilled = false;
-            transform.ScaleTween(Vector3.zero, 8.0f).SetEase(Ease.EaseOutExpo).SetOnComplete(delegate
+            transform.ScaleTween(Vector3.zero, 9.0f).SetEase(Ease.EaseOutExpo).SetOnComplete(delegate
            {
                if (!destroyed)
-                   Destroy(gameObject, 6f);
+                   Destroy(gameObject, 7f);
            });
         }
 
