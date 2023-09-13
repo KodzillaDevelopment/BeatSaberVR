@@ -29,6 +29,7 @@ public class GameEventManager : MonoBehaviour
 
 
         //lastTime = wallInfo.time;
+
     }
 
     private IEnumerator Start()
@@ -46,9 +47,9 @@ public class GameEventManager : MonoBehaviour
             notificationText.text = "";
         }
     }
-
-    private void Update()
+    public void SpawnWallForCube()
     {
+        VR_BeatManager.instance.Spawn(wallObject, wallInfo);
     }
 
     public void LosePoint()
