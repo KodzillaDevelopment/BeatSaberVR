@@ -59,7 +59,14 @@ namespace VRBeats
         public void OnCut(DamageInfo info)
         {
             StartCoroutine(StopShowText());
-            GameEventManager.instance.etkisizHaleGetirir.enabled = true;
+            //if (int.Parse(FindObjectOfType<ScoreManager>().scoreLabel.text) <= 300)
+            //{
+            //    //GameEventManager.instance.etkisizHaleGetirir.enabled = true;
+            //}
+            //else
+            //{
+            //    //GameEventManager.instance.etkisizHaleGetirir.enabled = false;
+            //}
             canBeKilled = false;
 
             //notify to whoever is listening that the player did a correct/incorrect slice
@@ -105,8 +112,8 @@ namespace VRBeats
         {
             if (other.gameObject.CompareTag("Shield"))
             {
-                Kill();
-            }    
+                KillShield();
+            }
         }
 
         private void Update()
@@ -121,7 +128,7 @@ namespace VRBeats
 
             if (ShouldKillCube())
             {
-                Kill();
+                KillShield();
             }
         }
 
@@ -134,14 +141,23 @@ namespace VRBeats
         {
             onPlayerMiss.Invoke();
             canBeKilled = false;
-            transform.ScaleTween(Vector3.zero, 1.0f).SetEase(Ease.EaseOutExpo).SetOnComplete(delegate
+            transform.ScaleTween(Vector3.zero, 8.0f).SetEase(Ease.EaseOutExpo).SetOnComplete(delegate
            {
                if (!destroyed)
-                   Destroy(gameObject);
+                   Destroy(gameObject, 6f);
            });
         }
 
-
+        public void KillShield()
+        {
+            onPlayerMiss.Invoke();
+            canBeKilled = false;
+            transform.ScaleTween(Vector3.zero, 1.0f).SetEase(Ease.EaseOutExpo).SetOnComplete(delegate
+            {
+                if (!destroyed)
+                    Destroy(gameObject);
+            });
+        }
     }
 
 }

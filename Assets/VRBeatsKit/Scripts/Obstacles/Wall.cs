@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using VRBeats.ScriptableEvents;
 
 namespace VRBeats
@@ -35,7 +36,14 @@ namespace VRBeats
             {
                 Kill();
             }
-
+            if (GameEventManager.instance.canSave)
+            {
+                GetComponentInChildren<Text>().text = "KORUR";
+            }
+            if (GameEventManager.instance.canHold)
+            {
+                GetComponentInChildren<Text>().text = "HAPSEDER";
+            }
         }
                 
         private void OnTriggerEnter(Collider other)

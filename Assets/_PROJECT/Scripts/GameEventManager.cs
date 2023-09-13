@@ -20,6 +20,8 @@ public class GameEventManager : MonoBehaviour
     public Text etkisizHaleGetirir;
     private float timer = 5.5f;
     private int second;
+    public bool canSave;
+    public bool canHold;
 
     private void Awake()
     {
@@ -79,6 +81,7 @@ public class GameEventManager : MonoBehaviour
 
     public void OpenShield()
     {
+        canSave = true;
         shieldObject.SetActive(true);
         VR_BeatManager.instance.Spawn(wallObject, wallInfo);
         //notificationText.text = "KORUR";
@@ -87,17 +90,21 @@ public class GameEventManager : MonoBehaviour
 
     IEnumerator GetBackShield()
     {
-        wallObject.GetComponentInChildren<Text>().text = "KORUR";
+        yield return new WaitForFixedUpdate();
+        //wallObject.GetComponentInChildren<Text>().text = "KORUR";
+        //wallObject.GetComponentInChildren<Text>().text = "KORUR";
         yield return new WaitForSeconds(10f);
         //notificationText.text = "";
         shieldObject.SetActive(false);
         ScoreManager.canErrorIncrease = true;
+        canSave = false;
     }
 
     public IEnumerator SpawnBubbleWall()
     {
+        canHold = true;
         VR_BeatManager.instance.Spawn(wallObject, wallInfo);
         yield return new WaitForFixedUpdate();
-        wallObject.GetComponentInChildren<Text>().text = "HAPSEDER";
+        //wallObject.GetComponentInChildren<Text>().text = "HAPSEDER";
     }
 }

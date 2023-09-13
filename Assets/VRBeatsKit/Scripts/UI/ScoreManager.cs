@@ -9,7 +9,7 @@ namespace VRBeats
     public class ScoreManager : MonoBehaviour
     {
         [SerializeField] private Text multiplierLabel = null;
-        [SerializeField] private Text scoreLabel = null;
+        public Text scoreLabel = null;
         [SerializeField] private Image multiplierLoader = null;
         [SerializeField] private float scoreFollowTime = 1.0f;
         [SerializeField] private CanvasGroup canvasGroup = null;
@@ -100,7 +100,7 @@ namespace VRBeats
                 canErrorIncrease = false;
                 FindObjectOfType<GameEventManager>().OpenShield();
             }
-            else if (correctNumber == 5 || correctNumber == 15)
+            if (correctNumber == 5 || correctNumber == 15)
             {
                 StartCoroutine(FindObjectOfType<GameEventManager>().SpawnBubbleWall());
                 StartCoroutine(ShowBubbles());
@@ -133,7 +133,7 @@ namespace VRBeats
 
 
         }
-        private float timer = 3f;
+        private float timer = 4f;
         IEnumerator ShowBubbles()
         {
             while (timer >= 0)
@@ -145,9 +145,9 @@ namespace VRBeats
                     {
                         item.canMove = false;
                         item.particles.SetActive(true);
-                        yield return new WaitForSeconds(3f);
-                        item.onCorrectSlice.Invoke();
-                        yield return new WaitForFixedUpdate();
+                        //yield return new WaitForSeconds(3f);
+                        //item.onCorrectSlice.Invoke();
+                        //yield return new WaitForFixedUpdate();
                         item.Kill();
                         //item.canMove = false;
                         //item.particles.SetActive(true);
@@ -155,9 +155,11 @@ namespace VRBeats
                         //FindObjectOfType<GameEventManager>().notificationText.text = "HAPSEDER";
                     }
                 }
-                if (timer <= 0)
+                if (timer < 0)
                 {
+                    GameEventManager.instance.canHold = false;
                     timer = 3f;
+                    yield break;
                 }
                 yield return null;
             }

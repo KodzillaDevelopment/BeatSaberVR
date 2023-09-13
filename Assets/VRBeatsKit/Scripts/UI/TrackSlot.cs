@@ -38,6 +38,9 @@ namespace VRBeats.UI
             authorName.text = info.author;
             trackInfo = info;
             this.onClick = onClick;
+
+
+            onClick.Invoke(info);
         }
 
 
