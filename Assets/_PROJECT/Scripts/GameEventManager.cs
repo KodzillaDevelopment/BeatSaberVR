@@ -31,7 +31,7 @@ public class GameEventManager : MonoBehaviour
 
 
         //lastTime = wallInfo.time;
-        //VR_BeatManager.instance.Spawn(wallObject, wallInfo);
+        VR_BeatManager.instance.Spawn(wallObject, wallInfo);
 
     }
 
@@ -42,6 +42,7 @@ public class GameEventManager : MonoBehaviour
             timer -= Time.deltaTime;
             second = (int)timer;
             notificationText.text = second.ToString();
+            notificationText.GetComponentInChildren<Image>().fillAmount -= (Time.deltaTime / 5);
             yield return null;
         }
         foreach (var item in startParticles)

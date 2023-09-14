@@ -14,6 +14,7 @@ namespace VRBeats
         [SerializeField] private GameEvent onPlayerMiss = null;
         [SerializeField] Rigidbody rbLeft;
         [SerializeField] Rigidbody rbRight;
+        [SerializeField] GameObject cutParticle;
 
         public GameObject particles;
         public bool canMove = true;
@@ -74,6 +75,7 @@ namespace VRBeats
             {
                 if (GameEventManager.instance.canSpawnWall)
                 {
+                    cutParticle.SetActive(true);
                     GameEventManager.instance.SpawnWallForCube();
                     GameEventManager.instance.canSpawnWall = false;
                 }
