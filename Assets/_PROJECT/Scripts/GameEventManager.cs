@@ -31,7 +31,7 @@ public class GameEventManager : MonoBehaviour
 
 
         //lastTime = wallInfo.time;
-        VR_BeatManager.instance.Spawn(wallObject, wallInfo);
+        //VR_BeatManager.instance.Spawn(wallObject, wallInfo);
 
     }
 

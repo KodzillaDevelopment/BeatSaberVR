@@ -14,7 +14,6 @@ namespace VRBeats
         [SerializeField] private GameEvent onPlayerMiss = null;
         [SerializeField] Rigidbody rbLeft;
         [SerializeField] Rigidbody rbRight;
-        [SerializeField] GameObject cutParticle;
 
         public GameObject particles;
         public bool canMove = true;
@@ -73,9 +72,10 @@ namespace VRBeats
             //notify to whoever is listening that the player did a correct/incorrect slice
             if (IsCutIntentValid(info as BeatDamageInfo))
             {
+               
                 if (GameEventManager.instance.canSpawnWall)
                 {
-                    cutParticle.SetActive(true);
+                    
                     GameEventManager.instance.SpawnWallForCube();
                     GameEventManager.instance.canSpawnWall = false;
                 }

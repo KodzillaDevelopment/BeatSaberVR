@@ -127,7 +127,6 @@ MonoBehaviour:
   onPlayerMiss: {fileID: 11400000, guid: 64c69597d841fe943a9208e76c0b6361, type: 2}
   rbLeft: {fileID: 3041533076758417310}
   rbRight: {fileID: 2027579529550648660}
-  cutParticle: {fileID: 3726046130889303144}
   particles: {fileID: 8104843034492844435}
   canMove: 1
 --- !u!114 &4750244416697131415
@@ -176,6 +175,7 @@ MonoBehaviour:
         m_CallState: 2
   rbLeft: {fileID: 3041533076758417310}
   rbRight: {fileID: 2027579529550648660}
+  cutParticle: {fileID: 3726046130889303144}
 --- !u!114 &-8967289558340754843
 MonoBehaviour:
   m_ObjectHideFlags: 0
