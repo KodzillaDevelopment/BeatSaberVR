@@ -95,7 +95,7 @@ namespace VRBeats
 
             correctNumber++;
 
-            if (correctNumber > 25 && correctNumber % 10 == 0)
+            if (correctNumber > 45 && correctNumber % 20 == 0)
             {
                 canErrorIncrease = false;
                 FindObjectOfType<GameEventManager>().OpenShield();

@@ -148,10 +148,10 @@ namespace VRBeats
         {
             onPlayerMiss.Invoke();
             canBeKilled = false;
-            transform.ScaleTween(Vector3.zero, 9.0f).SetEase(Ease.EaseOutExpo).SetOnComplete(delegate
+            transform.ScaleTween(Vector3.zero, 16.0f).SetEase(Ease.EaseOutExpo).SetOnComplete(delegate
            {
                if (!destroyed)
-                   Destroy(gameObject, 7f);
+                   Destroy(gameObject, 9f);
            });
         }
 

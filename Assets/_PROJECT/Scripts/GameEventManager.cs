@@ -98,7 +98,7 @@ public class GameEventManager : MonoBehaviour
         yield return new WaitForFixedUpdate();
         //wallObject.GetComponentInChildren<Text>().text = "KORUR";
         //wallObject.GetComponentInChildren<Text>().text = "KORUR";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(8f);
         //notificationText.text = "";
         shieldObject.SetActive(false);
         ScoreManager.canErrorIncrease = true;
