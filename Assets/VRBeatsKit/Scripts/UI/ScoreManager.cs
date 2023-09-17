@@ -143,8 +143,8 @@ namespace VRBeats
                 {
                     if (item.gameObject.activeInHierarchy)
                     {
-                        item.canMove = false;
                         item.particles.SetActive(true);
+                        item.canMove = false;
                         //yield return new WaitForSeconds(3f);
                         //item.onCorrectSlice.Invoke();
                         //yield return new WaitForFixedUpdate();
@@ -158,7 +158,7 @@ namespace VRBeats
                 if (timer < 0)
                 {
                     GameEventManager.instance.canHold = false;
-                    timer = 3f;
+                    timer = 4f;
                     yield break;
                 }
                 yield return null;

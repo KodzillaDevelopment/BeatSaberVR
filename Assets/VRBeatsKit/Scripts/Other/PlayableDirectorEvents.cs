@@ -7,7 +7,7 @@ namespace VRBeats
     public class PlayableDirectorEvents : MonoBehaviour
     {
         [SerializeField] private GameEvent onLevelComplete = null;
-
+        [SerializeField] GameObject closedCanvas;
         private PlayableDirector director = null;
         private bool alreadyStarted = false;
         private bool eventTrigered = false;
@@ -27,6 +27,7 @@ namespace VRBeats
 
             if (!eventTrigered && director.time >= director.playableAsset.duration - 0.5f)
             {
+                closedCanvas.SetActive(false);
                 eventTrigered = true;
                 onLevelComplete.Invoke();
             }

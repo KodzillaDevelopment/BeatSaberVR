@@ -65,7 +65,7 @@ public class GameEventManager : MonoBehaviour
         foreach (var item in blueParticles)
         {
             item.SetActive(true);
-            StartCoroutine(SetActiveFalse(item));
+            //StartCoroutine(SetActiveFalse(item));
         }
     }
 
@@ -74,7 +74,7 @@ public class GameEventManager : MonoBehaviour
         foreach (var item in redParticles)
         {
             item.SetActive(true);
-            StartCoroutine(SetActiveFalse(item));
+            //StartCoroutine(SetActiveFalse(item));
         }
     }
 
