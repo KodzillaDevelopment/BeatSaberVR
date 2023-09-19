@@ -867,6 +867,22 @@ MonoBehaviour:
     rotation: {x: 0, y: 0, z: 0}
     speed: 7
     speedMultiplier: -1
+--- !u!114 &-4602649225804708980
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 18.533333333333335
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: 4287a2dcfe999884f8cceccf2b8412b6, type: 2}
 --- !u!114 &-4545662348099796712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1720,6 +1736,7 @@ MonoBehaviour:
     - {fileID: 1247266614210675951}
     - {fileID: -5512152592396545861}
     - {fileID: 6950320768919648507}
+    - {fileID: -4602649225804708980}
   m_InfiniteClipPreExtrapolation: 0
   m_InfiniteClipPostExtrapolation: 0
   m_InfiniteClipOffsetPosition: {x: 0, y: 0, z: 0}

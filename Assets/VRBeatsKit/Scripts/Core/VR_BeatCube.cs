@@ -72,10 +72,10 @@ namespace VRBeats
             //notify to whoever is listening that the player did a correct/incorrect slice
             if (IsCutIntentValid(info as BeatDamageInfo))
             {
-               
+
                 if (GameEventManager.instance.canSpawnWall)
                 {
-                    
+
                     GameEventManager.instance.SpawnWallForCube();
                     GameEventManager.instance.canSpawnWall = false;
                 }
@@ -148,11 +148,16 @@ namespace VRBeats
         {
             onPlayerMiss.Invoke();
             canBeKilled = false;
-            transform.ScaleTween(Vector3.zero, 20f).SetEase(Ease.EaseOutExpo).SetOnComplete(delegate
+            transform.ScaleTween(Vector3.zero, 40f).SetEase(Ease.EaseOutExpo).SetOnComplete(delegate
            {
                if (!destroyed)
-                   Destroy(gameObject, 9f);
+                   Destroy(gameObject, 6f);
            });
+            if (!destroyed)
+            {
+                Destroy(gameObject, 6f);
+            }
+
         }
 
         public void KillShield()

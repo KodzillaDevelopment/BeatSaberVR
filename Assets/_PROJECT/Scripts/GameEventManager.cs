@@ -17,6 +17,7 @@ public class GameEventManager : MonoBehaviour
     [SerializeField] GameObject[] redParticles = new GameObject[4];
     [SerializeField] GameObject shieldObject;
     [SerializeField] GameObject lights;
+    [SerializeField] GameObject donengec;
 
     public Text notificationText;
     public Text etkisizHaleGetirir;
@@ -64,12 +65,18 @@ public class GameEventManager : MonoBehaviour
     public void BlueParticlesPlay()
     {
         lights.SetActive(true);
-
+        donengec.SetActive(true);
         foreach (var item in blueParticles)
         {
             item.SetActive(true);
             //StartCoroutine(SetActiveFalse(item));
         }
+    }
+
+    public void ChangeVariables()
+    {
+        FindObjectOfType<LightController>().timer = 3f;
+        FindObjectOfType<LightController>().rotationSpeed = 1.5f;
     }
 
     public void RedParticlesPlay()

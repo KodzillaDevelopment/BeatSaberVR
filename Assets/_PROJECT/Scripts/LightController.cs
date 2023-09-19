@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class LightController : MonoBehaviour
 {
+    public float timer = 3f;
+    public float rotationSpeed = 1f;
+
     [SerializeField] GameObject mainLight;
 
     [SerializeField] GameObject[] leftLights = new GameObject[8];
     [SerializeField] GameObject[] rightLights = new GameObject[8];
+    [SerializeField] Material redMaterial;
 
     private bool gameobjectCanRight;
     private bool leftCanRight;
@@ -15,6 +19,8 @@ public class LightController : MonoBehaviour
 
     void Start()
     {
+        timer = 4f;
+        rotationSpeed = .8f;
         StartCoroutine(RotateGameobject());
 
     }
@@ -26,11 +32,13 @@ public class LightController : MonoBehaviour
             gameobjectCanRight = true;
             leftCanRight = true;
             rightCanRight = true;
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(timer);
+            redMaterial.SetColor("_EmissionColor", Color.red * 10f);
             gameobjectCanRight = false;
             leftCanRight = false;
             rightCanRight = false;
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(timer);
+            redMaterial.SetColor("_EmissionColor", Color.red * 2f);
 
             yield return null;
         }
@@ -40,17 +48,17 @@ public class LightController : MonoBehaviour
     {
         if (gameobjectCanRight)
         {
-            mainLight.transform.Rotate(0, 1f, 0);
+            mainLight.transform.Rotate(0, 0, rotationSpeed);
         }
         else
         {
-            mainLight.transform.Rotate(0, -1f, 0);
+            mainLight.transform.Rotate(0, 0, -rotationSpeed);
         }
         if (leftCanRight)
         {
             foreach (var item in leftLights)
             {
-                item.transform.Rotate(0, 1f, 1f);
+                item.transform.Rotate(0, rotationSpeed, rotationSpeed);
             }
             //leftLights.transform.Rotate(0, 2f, 2f);
         }
@@ -58,7 +66,7 @@ public class LightController : MonoBehaviour
         {
             foreach (var item in leftLights)
             {
-                item.transform.Rotate(0, -1f, -1f);
+                item.transform.Rotate(0, -rotationSpeed, -rotationSpeed);
             }
             //leftLights.transform.Rotate(0, -2f, -2f);
         }
@@ -66,7 +74,7 @@ public class LightController : MonoBehaviour
         {
             foreach (var item in rightLights)
             {
-                item.transform.Rotate(0, 1f, 1f);
+                item.transform.Rotate(0, rotationSpeed, rotationSpeed);
             }
             //rightLights.transform.Rotate(0, 2f, 2f);
         }
@@ -74,7 +82,7 @@ public class LightController : MonoBehaviour
         {
             foreach (var item in rightLights)
             {
-                item.transform.Rotate(0, -1f, -1f);
+                item.transform.Rotate(0, -rotationSpeed, -rotationSpeed);
             }
             //rightLights.transform.Rotate(0, -2f, -2f);
         }
