@@ -8,6 +8,9 @@ namespace VRBeats
     {
         [SerializeField] private GameEvent onLevelComplete = null;
         [SerializeField] GameObject closedCanvas;
+        [SerializeField] GameObject closeObject;
+        [SerializeField] GameObject openObject;
+
         private PlayableDirector director = null;
         private bool alreadyStarted = false;
         private bool eventTrigered = false;
@@ -27,6 +30,8 @@ namespace VRBeats
 
             if (!eventTrigered && director.time >= director.playableAsset.duration - 0.5f)
             {
+                closeObject.SetActive(false);
+                openObject.SetActive(true);
                 closedCanvas.SetActive(false);
                 eventTrigered = true;
                 onLevelComplete.Invoke();
