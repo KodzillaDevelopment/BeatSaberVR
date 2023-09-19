@@ -16,6 +16,7 @@ public class GameEventManager : MonoBehaviour
     [SerializeField] GameObject[] blueParticles = new GameObject[4];
     [SerializeField] GameObject[] redParticles = new GameObject[4];
     [SerializeField] GameObject shieldObject;
+    [SerializeField] GameObject lights;
 
     public Text notificationText;
     public Text etkisizHaleGetirir;
@@ -62,6 +63,8 @@ public class GameEventManager : MonoBehaviour
     }
     public void BlueParticlesPlay()
     {
+        lights.SetActive(true);
+
         foreach (var item in blueParticles)
         {
             item.SetActive(true);
