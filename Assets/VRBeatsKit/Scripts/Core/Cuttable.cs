@@ -10,7 +10,7 @@ namespace VRBeats
         [SerializeField] private OnDamageEvent onCut = null;
         [SerializeField] Rigidbody rbLeft;
         [SerializeField] Rigidbody rbRight;
-        [SerializeField] GameObject cutParticle;
+        //[SerializeField] GameObject cutParticle;
 
         private Material insideMaterial = null;
 
@@ -45,14 +45,14 @@ namespace VRBeats
                 rbRight.AddForce(new Vector3(-1, -1, 0) * 1000f);
                 rbLeft.gameObject.transform.SetParent(null);
                 rbRight.gameObject.transform.SetParent(null);
-                cutParticle.SetActive(true);
-                cutParticle.transform.SetParent(null);
-                cutParticle.GetComponent<ParticleSystem>().Play();
-                foreach (ParticleSystem item in cutParticle.GetComponentsInChildren<ParticleSystem>())
-                {
-                    item.Play();
-                }
-                Destroy(cutParticle, 2f);
+                //cutParticle.SetActive(true);
+                //cutParticle.transform.SetParent(null);
+                //cutParticle.GetComponent<ParticleSystem>().Play();
+                //foreach (ParticleSystem item in cutParticle.GetComponentsInChildren<ParticleSystem>())
+                //{
+                //    item.Play();
+                //}
+                //Destroy(cutParticle, 2f);
                 Destroy(rbLeft.gameObject, 1f);
                 Destroy(rbRight.gameObject, 1f);
 
