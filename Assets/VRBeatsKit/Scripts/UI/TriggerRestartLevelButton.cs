@@ -22,6 +22,10 @@ namespace VRBeats.UI
 
         private void TriggerRestartEvent()
         {
+            PlayerPrefs.DeleteAll();
+
+            Caching.ClearCache();
+
             ScoreManager.correctNumber = 0;
 
             SceneManager.LoadScene(0);
